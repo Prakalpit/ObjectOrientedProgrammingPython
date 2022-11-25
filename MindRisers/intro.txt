@@ -1,0 +1,107 @@
+Class and Objects
+
+Class --> Blueprint of Object
+
+Objects --> Instance of Class
+
+Some real world examples
+    1) Student
+    2) Car
+    3) Bike
+    4) House
+    5) Mobile
+
+Syntax
+
+class <classname>():
+    <attributes>
+    <methods>
+
+Class Name -> Noun
+Attributes/Properties -> Adjective
+Method/Functions(We call Methods) ->Verb
+
+self --> is a user defined keyword which is used to indicate
+the methods/attributes belonging to the particular class
+that they are defined/declared
+
+id() --> that gives the reference identity of identifier
+
+Functions Vs Methods
+
+------------- Methods -------------
+they are bind with in the class/object
+can be defined within class only
+self keyword is passed as a parameter anytime
+can be invoked/called via class/object only
+
+------------- Function -------------
+can be defined anywhere
+is callable any were possible
+is called/invoked by its name
+
+
+==================== Day Two ====================
+========== CONSTRUCTOR ==========
+__init__()
+It is a special type of function which is used to
+create or build objects and to initialize the
+attributes of class
+
+default constructor ==> if the constructor is not defined
+then the python interpreter will create default constructor
+during the time of execution
+
+
+========== TYPES OF CONSTRUCTOR ==========
+parametrized constructor
+non-parametrized constructor
+
+
+========== DESTRUCTOR ==========
+
+del or __del__()
+special type of method used to destroy or delete the unused
+and/or unnecessary/idle objects from the memory
+
+
+========== Inheritance ==========
+classes are derived from the properties of base class
+
+if we are creating constructor inside child class then we must pass parent's class constructor
+inside child class
+
+See example below:
+
+class TeslaModelX(Vehicle):
+    def __init__(self):
+        Vehicle.__init__(self) #see it being passed
+        self.model = "TeslaX"
+        self.mode = "Automatic"
+
+or
+
+class TeslaModelX(Vehicle):
+    def __init__(self):
+        super().__init__() #see it being passed
+        self.model = "TeslaX"
+        self.mode = "Automatic"
+
+
+TYPES OF INHERITANCE
+1) Single
+2) Multiple
+3) Multi-Level/ Hierarchical
+
+
+========== Encapsulation ==========
+1) Public --> No symbol before attribute name
+2) Protected --> single underscore before attribute name
+3) Private --> double underscore before attribute name
+
+We can not access private properties directly so in order to access the private attributes we
+need to use it via some public modules or we can impliment access modifier
+
+
+========== Polymorphism ==========
+Method Overriding
